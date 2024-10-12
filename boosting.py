@@ -175,7 +175,24 @@ def main_menu():
         main_menu()
 
 def update():
-    git_pull_repository()  # Call the git pull function
+    # Repository path on your device
+    boosting_repo_path = './BOOSTING'  # Adjust as needed if stored elsewhere
+    boosting_repo_url = 'https://github.com/KYZER02435/BOOSTING'
+
+    if os.path.exists(boosting_repo_path):
+        print(f"{c}Updating the BOOSTING repository...{r}")
+        try:
+            subprocess.run(['git', 'pull'], cwd=boosting_repo_path, check=True)
+            print(f"{wh}BOOSTING repository updated successfully.{r}")
+        except subprocess.CalledProcessError as e:
+            print(f"{red}Error occurred while updating BOOSTING: {e}{r}")
+    else:
+        print(f"{red}BOOSTING repository not found. Cloning it...{r}")
+        try:
+            subprocess.run(['git', 'clone', boosting_repo_url], check=True)
+            print(f"{wh}BOOSTING repository cloned successfully.{r}")
+        except subprocess.CalledProcessError as e:
+            print(f"{red}Error occurred while cloning BOOSTING: {e}{r}")
 
 def extract_account():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
