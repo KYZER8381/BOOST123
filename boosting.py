@@ -175,35 +175,30 @@ def main_menu():
         main_menu()
 
 def update():
-    boosting_repo_path = './BOOSTING'  # Path where the local repo is stored
-    boosting_repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    # Paths to the local repositories
+    main_repo_path = '.'  # Assuming the script is in the main repo directory
+    boosting_repo_path = './BOOSTING'  # Path to the local BOOSTING repository
 
-    # Check if the repo exists locally
-    if not os.path.exists(boosting_repo_path):
-        print(f"{red}BOOSTING repository not found locally. Cloning...{r}")
-        try:
-            subprocess.run(['git', 'clone', boosting_repo_url], check=True)
-            print(f"{wh}BOOSTING repository cloned successfully.{r}")
-        except subprocess.CalledProcessError as e:
-            print(f"{red}Error cloning the repository: {e}{r}")
-        return  # Exit after cloning since further operations are redundant
-
+    # Update the main repository
     try:
-        print(f"{c}Pulling the latest changes...{r}")
-        subprocess.run(['git', 'pull'], cwd=boosting_repo_path, check=True)
-        print(f"{wh}Latest changes pulled successfully.{r}")
-        
-        # Check for local changes to commit
-        print(f"{c}Checking for local changes...{r}")
-        subprocess.run(['git', 'add', '.'], cwd=boosting_repo_path, check=True)
-        subprocess.run(['git', 'commit', '-m', 'Auto-update from script'], cwd=boosting_repo_path)
-        
-        print(f"{c}Pushing changes to the main repository...{r}")
-        subprocess.run(['git', 'push'], cwd=boosting_repo_path, check=True)
-        print(f"{wh}Repository updated and pushed successfully.{r}")
-
+        print(f"{c}Updating the main repository...{r}")
+        subprocess.run(['git', 'pull'], cwd=main_repo_path, check=True)
+        print(f"{wh}Main repository updated successfully.{r}")
     except subprocess.CalledProcessError as e:
-        print(f"{red}Error during repository update: {e}{r}")
+        print(f"{red}Error occurred while updating the main repository: {e}{r}")
+
+    # Check if the BOOSTING repo exists locally
+    if not os.path.exists(boosting_repo_path):
+        print(f"{red}BOOSTING repository not found locally. Please clone it first.{r}")
+        return  # Exit if the repository is not found
+
+    # Update the BOOSTING repository
+    try:
+        print(f"{c}Pulling the latest changes from the BOOSTING repository...{r}")
+        subprocess.run(['git', 'pull'], cwd=boosting_repo_path, check=True)
+        print(f"{wh}BOOSTING repository updated successfully.{r}")
+    except subprocess.CalledProcessError as e:
+        print(f"{red}Error occurred while updating the BOOSTING repository: {e}{r}")
               
 def extract_account():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
