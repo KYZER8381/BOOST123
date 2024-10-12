@@ -129,6 +129,7 @@ def main_menu():
     print("[11] Auto Comments for Reels")
     print("[12] Auto Comments for Videos")
     print("[13] Spam Shares")
+    print("[14] Auto Join Group")
     print("[R] Reset")
     print("[E] Exit")
 
@@ -162,6 +163,8 @@ def main_menu():
         auto_comments_vids()
     elif choice == '13':
         spam_share()
+    elif choice == '14':
+        join_group()
     elif choice == 'R':
         reset()
     elif choice == 'E':
@@ -172,27 +175,7 @@ def main_menu():
         main_menu()
 
 def update():
-    # Update the current repository
-    print(f"{g}Updating the current repository...{r}")
-    subprocess.run(['git', 'pull'], check=True)
-    print(f"{g}Current repository updated successfully.{r}")
-    
-    # Update or clone the external BOOSTING repository
-    boosting_repo_url = 'https://github.com/KYZER02435/BOOSTING.git'
-    boosting_repo_name = boosting_repo_url.split("/")[-1].replace(".git", "")
-    
-    if os.path.exists(boosting_repo_name):
-        print(f"{c}Updating External repository...{r}")
-        subprocess.run(['git', 'pull'], cwd=boosting_repo_name, check=True)
-        print(f"{wh}Repository updated successfully.{r}")
-    else:
-        print(f"{y} Updating External repository...{r}")
-        subprocess.run(['git', 'clone', boosting_repo_url], check=True)
-        print(f"{wh}Repository updated successfully.{r}")
-
-    # Exit after cloning or updating
-    print(f"{y}Exiting after the updates.{r}")
-    exit()
+    git_pull_repository()  # Call the git pull function
 
 def extract_account():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
@@ -253,10 +236,15 @@ def auto_comments_vids():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'video_comments.py'
     clone_and_run(repo_url, script_name)
-    
+
 def spam_share():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'spam_share.py'
+    clone_and_run(repo_url, script_name)
+
+def join_group():
+    repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    script_name = 'join_group.py'
     clone_and_run(repo_url, script_name)
 
 def reset():
