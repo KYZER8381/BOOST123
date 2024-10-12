@@ -175,25 +175,36 @@ def main_menu():
         main_menu()
 
 def update():
-    # Repository path on your device
-    boosting_repo_path = './BOOSTING'  # Adjust as needed if stored elsewhere
+    boosting_repo_path = './BOOSTING'  # Path where the local repo is stored
     boosting_repo_url = 'https://github.com/KYZER02435/BOOSTING'
 
-    if os.path.exists(boosting_repo_path):
-        print(f"{c}Updating the BOOSTING repository...{r}")
-        try:
-            subprocess.run(['git', 'pull'], cwd=boosting_repo_path, check=True)
-            print(f"{wh}BOOSTING repository updated successfully.{r}")
-        except subprocess.CalledProcessError as e:
-            print(f"{red}Error occurred while updating BOOSTING: {e}{r}")
-    else:
-        print(f"{red}BOOSTING repository not found. Cloning it...{r}")
+    # Check if the repo exists locally
+    if not os.path.exists(boosting_repo_path):
+        print(f"{red}BOOSTING repository not found locally. Cloning...{r}")
         try:
             subprocess.run(['git', 'clone', boosting_repo_url], check=True)
             print(f"{wh}BOOSTING repository cloned successfully.{r}")
         except subprocess.CalledProcessError as e:
-            print(f"{red}Error occurred while cloning BOOSTING: {e}{r}")
+            print(f"{red}Error cloning the repository: {e}{r}")
+        return  # Exit after cloning since further operations are redundant
 
+    try:
+        print(f"{c}Pulling the latest changes...{r}")
+        subprocess.run(['git', 'pull'], cwd=boosting_repo_path, check=True)
+        print(f"{wh}Latest changes pulled successfully.{r}")
+        
+        # Check for local changes to commit
+        print(f"{c}Checking for local changes...{r}")
+        subprocess.run(['git', 'add', '.'], cwd=boosting_repo_path, check=True)
+        subprocess.run(['git', 'commit', '-m', 'Auto-update from script'], cwd=boosting_repo_path)
+        
+        print(f"{c}Pushing changes to the main repository...{r}")
+        subprocess.run(['git', 'push'], cwd=boosting_repo_path, check=True)
+        print(f"{wh}Repository updated and pushed successfully.{r}")
+
+    except subprocess.CalledProcessError as e:
+        print(f"{red}Error during repository update: {e}{r}")
+              
 def extract_account():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'extract-acc.py'
