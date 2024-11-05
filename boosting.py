@@ -129,7 +129,10 @@ def main_menu():
     print("[11] Auto Comments for Reels")
     print("[12] Auto Comments for Videos")
     print("[13] Spam Shares")
+    print("[14] Bundle Reactions")
+    print("[15] Auto Comment For Post(EASY WAY FOR DIFFERENT COMMENTS")
     print("[C] AUTO REMOVE DEAD ACCOUNTS")
+    print("[RDP] REMOVE DUPLICATE ACCOUNTS")
     print("[R] Reset")
     print("[E] Exit")
 
@@ -163,8 +166,14 @@ def main_menu():
         auto_comments_vids()
     elif choice == '13':
         spam_share()
+    elif choice == '14':
+        bundle_reacts()
+    elif choice == '15':
+        easy_comments()
     elif choice == 'C':
         acc_checker()
+    elif choice == 'RDP':
+        dupli_remover()
     elif choice == 'R':
         reset()
     elif choice == 'E':
@@ -264,10 +273,25 @@ def spam_share():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'spam_share.py'
     clone_and_run(repo_url, script_name)
+    
+def bundle_reacts():
+    repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    script_name = 'bundle_reacts.py'
+    clone_and_run(repo_url, script_name)
+
+def easy_comments():
+    repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    script_name = 'easy_comments.py'
+    clone_and_run(repo_url, script_name)
 
 def acc_checker():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'acc_checker.py'
+    clone_and_run(repo_url, script_name)
+    
+def dupli_remover():
+    repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    script_name = 'dupli_remover.py'
     clone_and_run(repo_url, script_name)
 
 def reset():
