@@ -110,7 +110,7 @@ def main_menu():
 
     # Check if the generated or stored key is approved
     if check_approval(github_raw_url, approval_key):
-        print(f"{y}    YOUR KEY IS BEING APPROVED: {c}{approval_key}{r}")  # Key approved message in yellow and key in cyan
+        print(f"{y}       YOUR KEY IS BEING APPROVED: {c}{approval_key}{r}")  # Key approved message in yellow and key in cyan
     else:
         print("Action denied due to missing approval key. Exiting...")
         exit()  # Exit if not approved
@@ -130,7 +130,7 @@ def main_menu():
     print("[12] Auto Comments for Videos")
     print("[13] Spam Shares")
     print("[14] Bundle Reactions")
-    print("[15] Auto Comment For Post/Vid/Reels(EASY WAY FOR DIFFERENT COMMENTS)")
+    print("[15] Auto Comment For Post/Vid/Reels(EASY WAY)")
     print("[C] AUTO REMOVE DEAD ACCOUNTS")
     print("[RDP] REMOVE DUPLICATE ACCOUNTS")
     print("[R] Reset")
