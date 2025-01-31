@@ -177,7 +177,7 @@ def extract_account():
     
 def spam_share():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
-    script_name = 'share_old.py'
+    script_name = 'spam_share.py'
     clone_and_run(repo_url, script_name)
 
 def acc_checker():
