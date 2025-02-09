@@ -590,17 +590,17 @@ def choose_file_and_delete_linex():
     path_file = None
     check_path = None
     if account_choose == '1':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
     elif account_choose == '2':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
     elif account_choose == '3':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
     elif account_choose == '4':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
     elif account_choose == '0':
         print('Returning...')
         return
@@ -635,19 +635,19 @@ def display_file_info():
         file_choose = input(f'''{yellow}  Choose : {green}''')
         linex()
         if file_choose == '1' or file_choose == '01':
-            file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
+            file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
             display_file_content(file_path)
             break
         elif file_choose == '2' or file_choose == '02':
-            file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
+            file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
             display_file_content(file_path)
             break
         elif file_choose == '3' or file_choose == '03':
-            file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
+            file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
             display_file_content(file_path)
             break
         elif file_choose == '4' or file_choose == '04':
-            file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
+            file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
             display_file_content(file_path)
             break
         elif file_choose == '0' or file_choose == '00':
@@ -683,8 +683,8 @@ def delete_files():
         linex()
         if account_choose == '1' or account_choose == '01':
             file_paths = [
-                '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
-                '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt']
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt']
             all_deleted = True
             for file_path in file_paths:
                 if os.path.exists(file_path):
@@ -699,8 +699,8 @@ def delete_files():
                 break
         elif account_choose == '2' or account_choose == '02':
             file_paths = [
-                '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt',
-                '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt']
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt',
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt']
             all_deleted = True
             for file_path in file_paths:
                 if os.path.exists(file_path):
@@ -715,8 +715,8 @@ def delete_files():
                 break
         elif account_choose == '3' or account_choose == '03':
             file_paths = [
-                '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt',
-                '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt']
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt',
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt']
             all_deleted = True
             for file_path in file_paths:
                 if os.path.exists(file_path):
@@ -731,8 +731,8 @@ def delete_files():
                 break
         elif account_choose == '4' or account_choose == '04':
             file_paths = [
-                '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt',
-                '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt',
+                'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
             all_deleted = True
             for file_path in file_paths:
                 if os.path.exists(file_path):
@@ -764,10 +764,10 @@ def extract_and_save_facebook_pages():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     paths = {
-        '1': ['/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'],
-        '2': ['/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'],
-        '3': ['/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'],
-        '4': ['/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
+        '1': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'],
+        '2': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'],
+        '3': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'],
+        '4': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
     }
     if account_choose in paths:
         for file in paths[account_choose]:
@@ -798,10 +798,10 @@ def get_facebook_pages_with_token(poo):
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     paths = {
-        '1': ['/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'],
-        '2': ['/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'],
-        '3': ['/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'],
-        '4': ['/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
+        '1': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'],
+        '2': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'],
+        '3': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'],
+        '4': ['C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt']
     }
     if account_choose in paths:
         path_file, check_path = paths[account_choose]
@@ -952,17 +952,17 @@ def get_facebook_account():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     if account_choose == '1':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
     elif account_choose == '2':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
     elif account_choose == '3':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
     elif account_choose == '4':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
     elif account_choose == '0':
         start_tool()
         return None
@@ -1046,7 +1046,7 @@ def get_facebook_account():
         if 'session_key' in po:
             cookie = '; '.join([f"{i['name']}={i['value']}" for i in po.get('session_cookies', [])])
             token = po.get('access_token', '')
-            open('/sdcard/.EXTRACT-COOKIE-ACCOUNT-NAME-ID.txt','a').write(f'{cookie}\n')
+            open('C:\\Users\\pauli\\Documents\\.EXTRACT-COOKIE-ACCOUNT-NAME-ID.txt','a').write(f'{cookie}\n')
             print(f'''  {white}ID : {yellow}{ids} {white}---> {green}Successfully Extracted!''')
             open(check_path, 'a').write(f'{ids}\n')
             open(path_file, 'a').write(f'{token}\n')
@@ -1075,17 +1075,17 @@ def bgraph_bulk_account():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     if account_choose == '1':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'
     elif account_choose == '2':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'
     elif account_choose == '3':
-        path_file = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'
     elif account_choose == '4':
-        path_file = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
-        check_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
+        path_file = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
+        check_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt'
     elif account_choose == '0':
         start_tool()
         return None
@@ -1249,10 +1249,10 @@ def bgraph_bulk_pages():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     paths = {
-        '1': ('/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'),
-        '2': ('/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt', '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'),
-        '3': ('/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'),
-        '4': ('/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt', '/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt')
+        '1': ('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt'),
+        '2': ('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt'),
+        '3': ('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt'),
+        '4': ('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt', 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt')
     }
     if account_choose == '0':
         start_tool()
@@ -1463,7 +1463,7 @@ def _Cookies(id):
     if 'c_user' in _cookies:
         print(f'''  {white}ID : {yellow}{uid} {white}---> {green}Successfully Extract!''')
         linex()
-        with open('/sdcard/.EXTRACT-COOKIE-ACCOUNT.txt', 'a') as f:
+        with open('C:\\Users\\pauli\\Documents\\.EXTRACT-COOKIE-ACCOUNT.txt', 'a') as f:
             f.write(_cookies + '\n')
     elif 'checkpoint' in _cookies:
         print(f'''  {red}ID : {red}{uid} {white}---> {red}Failed!''')
@@ -1755,13 +1755,13 @@ def react():
     linex()
     file_path = None
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -1876,13 +1876,13 @@ def react_to_story():
     linex()
     file_path = None
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -1988,13 +1988,13 @@ def react_dp_cover():
     linex()
     file_path = None
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -2063,7 +2063,7 @@ headers_fb_lite = {
 def react_with_care():
     clear()
     logo()
-    coki_file_name = '/sdcard/.EXTRACT-COOKIE-ACCOUNT.txt'
+    coki_file_name = 'C:\\Users\\pauli\\Documents\\.EXTRACT-COOKIE-ACCOUNT.txt'
     try:
         with open(coki_file_name, 'r', encoding='utf-8') as file:
             coki_file = file.read().splitlines()
@@ -2158,13 +2158,13 @@ def react_comment():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -2246,13 +2246,13 @@ def react_reels():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -2325,13 +2325,13 @@ def follow():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     if account_choose == '1' or account_choose == '01':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
     elif account_choose == '2' or account_choose == '02':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
     elif account_choose == '3' or account_choose == '03':
-        file_path = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
     elif account_choose == '4' or account_choose == '04':
-        file_path = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        file_path = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     elif account_choose == '0' or account_choose == '00':
         main()
         return
@@ -2412,10 +2412,10 @@ def auto_comment():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     file_paths = {
-        '1': '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
-        '2': '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt',
-        '3': '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt',
-        '4': '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        '1': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
+        '2': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt',
+        '3': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt',
+        '4': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     }
     file_path = file_paths.get(account_choose)
     if not file_path:
@@ -2511,10 +2511,10 @@ def auto_comment_to_dp():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     file_paths = {
-        '1': '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
-        '2': '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt',
-        '3': '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt',
-        '4': '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        '1': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
+        '2': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt',
+        '3': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt',
+        '4': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     }
     file_path = file_paths.get(account_choose)
     if not file_path:
@@ -2603,10 +2603,10 @@ def reply_to_comment():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     file_paths = {
-        '1': '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
-        '2': '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt',
-        '3': '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt',
-        '4': '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        '1': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
+        '2': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt',
+        '3': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt',
+        '4': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     }
     file_path = file_paths.get(account_choose)
     if not file_path:
@@ -2695,10 +2695,10 @@ def auto_comment_to_reels():
     account_choose = input(f'''{yellow}  Choose : {green}''')
     linex()
     file_paths = {
-        '1': '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
-        '2': '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt',
-        '3': '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt',
-        '4': '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+        '1': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt',
+        '2': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt',
+        '3': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt',
+        '4': 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
     }
     file_path = file_paths.get(account_choose)
     if not file_path:
@@ -3094,22 +3094,22 @@ def count_lines_in_files(*file_paths):
             print(f'''\t\t{red}   {file_path} Not Found!''')
             continue
 
-path_file1 = '/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
-path_file2 = '/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt'
-path_file3 = '/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt'
-path_file4 = '/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt'
+path_file1 = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt'
+path_file2 = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt'
+path_file3 = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt'
+path_file4 = 'C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt'
 
 def main():
     clear()
     logo()
-    open('/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-FRA-PAGES.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-RP-PAGES.txt', 'a').write('')
-    open('/sdcard/.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-ACCOUNT-NAME-ID.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-ACCOUNT-NAME-ID.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-FRA-PAGES-NAME-ID.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES.txt', 'a').write('')
+    open('C:\\Users\\pauli\\Documents\\.EXTRACT-TOKEN-RP-PAGES-NAME-ID.txt', 'a').write('')
     print(f'''\t\t{blue}YOUR BOOSTING TOOL OVERVIEW''')
     linex()
     count_lines_in_files(path_file1, path_file2, path_file3, path_file4)
