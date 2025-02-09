@@ -1818,7 +1818,6 @@ def react():
     for i, access_token in enumerate(access_tokens[:limit]):
         uid_url = f'''{target_uid}_{converted_link}'''
         auto_react = f'''https://graph.facebook.com/{uid_url}/reactions?type={reaction_type}&access_token={access_token}'''
-        time.sleep(1)
         headers_ = {'user-agent': W_ueragnt()}
         response = requests.post(auto_react, headers=headers_)
         if response.ok:
