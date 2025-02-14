@@ -118,6 +118,7 @@ def main_menu():
     print("[0] Update Tool")
     print("[1] Extract Account")
     print("[2] AUTO SHARE")
+    print("[3] AUTO SHAREV2")
     print("[C] AUTO REMOVE DEAD ACCOUNTS")
     print("[RDP] REMOVE DUPLICATE ACCOUNTS")
     print("[R] Reset")
@@ -131,6 +132,8 @@ def main_menu():
         extract_account()
     elif choice == '2':
         spam_share()
+    elif choice == '3'
+        spam_sharev2()
     elif choice == 'C':
         acc_checker()
     elif choice == 'RDP':
@@ -178,6 +181,11 @@ def extract_account():
 def spam_share():
     repo_url = 'https://github.com/KYZER02435/BOOSTING'
     script_name = 'spam_share.py'
+    clone_and_run(repo_url, script_name)
+
+def spam_sharev2():
+    repo_url = 'https://github.com/KYZER02435/BOOSTING'
+    script_name = 'spam_sharev2.py'
     clone_and_run(repo_url, script_name)
 
 def acc_checker():
