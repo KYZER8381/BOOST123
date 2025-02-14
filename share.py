@@ -132,7 +132,7 @@ def main_menu():
         extract_account()
     elif choice == '2':
         spam_share()
-    elif choice == '3'
+    elif choice == '3':
         spam_sharev2()
     elif choice == 'C':
         acc_checker()
