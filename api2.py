@@ -2295,7 +2295,6 @@ def react_reels():
     for i, access_token in enumerate(access_tokens[:limit]):
         uid_url = f'''{comment_uid}'''
         auto_react = f'''https://graph.facebook.com/v18.0/{uid_url}/reactions?type={reaction_type}&access_token={access_token}'''
-        time.sleep(1)
         headers = {
             'user-agent': W_ueragnt()
         }
