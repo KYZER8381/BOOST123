@@ -2451,7 +2451,7 @@ def auto_comment():
         comment_index = i % num_comments
         comment = comments[comment_index]
         auto_comment_url = f'''https://graph.facebook.com/{converted_link}/comments'''
-        params = {'message': comment, 'access_token': access_token}u
+        params = {'message': comment, 'access_token': access_token}
         headers = {'user-agent': W_ueragnt()}
         response = requests.post(auto_comment_url,params=params,headers=headers)
         if response.ok:
